@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.example;
 import java.util.*;
 public class Pokemon {
@@ -13,11 +12,4 @@ public class Pokemon {
         System.out.print(Arrays.toString(a));
 
     }
-=======
-public class Pokemon{
-	public static void main(String[] args){
-
-		System.out.println("6");
-	}
->>>>>>> 1a2e2b4 (update)
 }
