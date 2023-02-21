@@ -10,6 +10,6 @@ public class Pokemon {
         for (int i = 1; i <= n-2; i++)
             a[i+2] = a[i+1] + a[i];
         System.out.print(Arrays.toString(a));
-
+        System.out.println("Success");
     }
 }
