@@ -1,12 +1,6 @@
 package org.example;
-<<<<<<< HEAD
-
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-=======
 import java.util.*;
-public class Main {
+public class Pokemon {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -17,6 +11,5 @@ public class Main {
             a[i+2] = a[i+1] + a[i];
         System.out.print(Arrays.toString(a));
 
->>>>>>> 8c5b3a7 (Initial commit)
     }
 }
