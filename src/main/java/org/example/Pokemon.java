@@ -4,13 +4,11 @@ public class Pokemon {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] a = new int[n+1];
+        int[] a = new int[n];
+        a[0] = 1;
         a[1] = 1;
-        a[2] = 1;
-        for (int i = 1; i <= n-2; i++)
+        for (int i = 0; i <= n-3; i++)
             a[i+2] = a[i+1] + a[i];
-        System.out.println("Success");
-        System.out.println("Finally");
         System.out.print(Arrays.toString(a));
     }
 }
