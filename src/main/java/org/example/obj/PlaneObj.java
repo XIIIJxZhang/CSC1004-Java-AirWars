@@ -7,8 +7,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class PlaneObj extends GameObj{
-    //己方战机血量：5
-    static int urHP = 5;
+    //己方战机血量：3
+    static int urHP = 3;
 
     @Override
     public Image getImg() {
@@ -48,8 +48,8 @@ public class PlaneObj extends GameObj{
             AirWars.state = 7;
         if (urHP == 0)
             AirWars.state = 7;
-        if (AirWars.score % 20 == 0)
-            urHP = urHP + 3;
+        if (AirWars.score % 30 == 0)
+            urHP = urHP + 2;
     }
 
     @Override

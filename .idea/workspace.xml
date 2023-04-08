@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737014c6-0a5b-4e1d-92f0-fd91e7099ccd" name="变更" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/BgObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/BossObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/BulletObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/EnShellObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/EnemyObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/ExplodeObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/GameObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/PlaneObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/ShellObj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/GameUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/boss001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/enBullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/enShell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/enemy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/entranceBg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/explode.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/set01Bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/urPlane.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/urShell.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/PlaneObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/PlaneObj.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/E for Education/大学文件夹/大一下/CSC1004/CSC1004-Java-AirWars",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/E for Education/大学文件夹/大一下/CSC1004/CSC1004-Java-AirWars&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\E for Education\大学文件夹\大一下\CSC1004\CSC1004-Java-Pokemon\src\main\java\org\example" />
@@ -106,7 +115,9 @@
       <workItem from="1676996876192" duration="1513000" />
       <workItem from="1677060598122" duration="1838000" />
       <workItem from="1677572645318" duration="1140000" />
-      <workItem from="1680858673344" duration="15099000" />
+      <workItem from="1680858673344" duration="17783000" />
+      <workItem from="1680890806918" duration="264000" />
+      <workItem from="1680892344821" duration="3446000" />
     </task>
     <task id="LOCAL-00005" summary="update">
       <created>1676996933139</created>
@@ -122,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677046655257</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1680886129523</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680886129523</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +158,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>

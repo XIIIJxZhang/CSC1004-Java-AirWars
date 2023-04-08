@@ -9,6 +9,21 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.text.MessageFormat;
+
 
 public class AirWars extends JFrame {
 
@@ -184,7 +199,7 @@ public class AirWars extends JFrame {
             }
         }
         //召唤Boss
-        if ((score % 50 == 0) && (bossObj == null)) {
+        if ((score != 0) && (score % 50 == 0) && (bossObj == null)) {
             bossObj = new BossObj(GameUtils.bossImg001,250,25,157,109,5,this);
             GameUtils.gameObjList.add(bossObj);
         }
