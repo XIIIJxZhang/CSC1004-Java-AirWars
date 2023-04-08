@@ -167,6 +167,7 @@ public class AirWars extends JFrame {
 
         if (state != 7)
             GameUtils.drawWord(gImage,score+"分",Color.green,40,30,100);
+
         g.drawImage(offScreenImage,0,0,null);
         count++;
     }
@@ -208,5 +209,4 @@ public class AirWars extends JFrame {
         AirWars airWars = new AirWars();
         airWars.launch();
     }
-
 }

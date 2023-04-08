@@ -25,18 +25,18 @@ public class EnShellObj extends GameObj{
                 ExplodeObj explodeObj = new ExplodeObj(x,y);
                 GameUtils.explodeObjList.add(explodeObj);
                 GameUtils.removeList.add(explodeObj);
-                shellObj.setX(-1000);
-                shellObj.setY(1000);
-                this.x = -2000;
-                this.y = 2000;
+                shellObj.setX(-1380);
+                shellObj.setY(1380);
+                this.x = -2560;
+                this.y = 2560;
                 GameUtils.removeList.add(shellObj);
                 GameUtils.removeList.add(this);
                 AirWars.score++;
             }
         }
         if (y > 576){
-            this.x = -1000;
-            this.y = 1000;
+            this.x = -1444;
+            this.y = 1444;
             GameUtils.removeList.add(this);
         }
     }

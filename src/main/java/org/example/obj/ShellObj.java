@@ -23,8 +23,8 @@ public class ShellObj extends GameObj{
         y -= speed;
         //游戏优化：出去的敌机清除
         if (y < 0){
-            this.x = -2000;
-            this.y = 2000;
+            this.x = -2700;
+            this.y = 2700;
             GameUtils.removeList.add(this);
         }
     }

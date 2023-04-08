@@ -29,10 +29,10 @@ public class EnemyObj extends GameObj{
                 ExplodeObj explodeObj = new ExplodeObj(x,y);
                 GameUtils.explodeObjList.add(explodeObj);
                 GameUtils.removeList.add(explodeObj);
-                shellObj.setX(-1000);
-                shellObj.setY(1000);
-                this.x = -2000;
-                this.y = 2000;
+                shellObj.setX(-1787);
+                shellObj.setY(1787);
+                this.x = -2080;
+                this.y = 2080;
                 GameUtils.removeList.add(shellObj);
                 GameUtils.removeList.add(this);
                 AirWars.score++;

@@ -36,4 +36,5 @@ public class BossObj extends GameObj{
     @Override
     public Rectangle getRec() {
         return super.getRec();
-    }}
+    }
+}
