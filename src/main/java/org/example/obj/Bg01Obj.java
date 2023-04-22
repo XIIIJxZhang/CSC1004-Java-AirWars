@@ -2,12 +2,12 @@ package org.example.obj;
 
 import java.awt.*;
 
-public class BgObj extends GameObj{
-    public BgObj() {
+public class Bg01Obj extends GameObj{
+    public Bg01Obj() {
         super();
     }
 
-    public BgObj(Image img, int x, int y, double speed) {
+    public Bg01Obj(Image img, int x, int y, double speed) {
         super(img, x, y, speed);
     }
 

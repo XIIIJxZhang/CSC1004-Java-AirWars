@@ -7,7 +7,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class PlaneObj extends GameObj{
-    //己方战机血量：3
+    //己方战机血量：1
     static int urHP = 3;
 
     @Override
@@ -44,12 +44,10 @@ public class PlaneObj extends GameObj{
                 urHP--;
             }
         }
-        if ((this.frame.bossObj != null) && (this.getRec().intersects(this.frame.bossObj.getRec())))
+        if ((this.frame.boss01Obj != null) && (this.getRec().intersects(this.frame.boss01Obj.getRec())))
             AirWars.state = 7;
         if (urHP == 0)
             AirWars.state = 7;
-        if (AirWars.score % 30 == 0)
-            urHP = urHP + 2;
     }
 
     @Override

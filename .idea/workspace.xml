@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737014c6-0a5b-4e1d-92f0-fd91e7099ccd" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Bg02Obj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/BossObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/BossObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/EnShellObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/EnShellObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/BgObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Bg01Obj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/BossObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Boss01Obj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/BulletObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/BulletObj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/EnemyObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/EnemyObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/ShellObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/ShellObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/PlaneObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/PlaneObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/GameUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,27 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "D:/BaiduNetdiskDownload/02、11个小游戏项目合集/085【尚学堂】飞机大战2.0加强版_Java飞机大战小游戏_源码课件/06-背景图的移动/planeWar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/BaiduNetdiskDownload/02、11个小游戏项目合集/085【尚学堂】飞机大战2.0加强版_Java飞机大战小游戏_源码课件/06-背景图的移动/planeWar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\E for Education\大学文件夹\大一下\CSC1004\CSC1004-Java-Pokemon\src\main\java\org\example" />
@@ -110,7 +114,10 @@
       <workItem from="1680858673344" duration="17783000" />
       <workItem from="1680890806918" duration="264000" />
       <workItem from="1680892344821" duration="4775000" />
-      <workItem from="1680961730659" duration="2456000" />
+      <workItem from="1680961730659" duration="2661000" />
+      <workItem from="1680965118950" duration="435000" />
+      <workItem from="1682080001724" duration="683000" />
+      <workItem from="1682091369668" duration="4838000" />
     </task>
     <task id="LOCAL-00005" summary="update">
       <created>1676996933139</created>
@@ -140,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680950603466</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1680964197801</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680964197801</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

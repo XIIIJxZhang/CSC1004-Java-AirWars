@@ -3,9 +3,9 @@ import org.example.AirWars;
 import org.example.utils.GameUtils;
 import  java.awt.*;
 
-public class BossObj extends GameObj{
-    int healthPoint = 50;
-    public BossObj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
+public class Boss01Obj extends GameObj{
+    public static int healthPoint = 50;
+    public Boss01Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }
 
@@ -17,13 +17,17 @@ public class BossObj extends GameObj{
         x += speed;
         for (ShellObj shellObj: GameUtils.shellObjList) {
             if (this.getRec().intersects(shellObj.getRec())){
+                ExplodeObj explodeObj = new ExplodeObj(x,y);
+                GameUtils.explodeObjList.add(explodeObj);
+                GameUtils.removeList.add(explodeObj);
                 shellObj.setX(-1000);
                 shellObj.setY(1000);
                 GameUtils.removeList.add(shellObj);
                 healthPoint--;
             }
-            if (healthPoint <= 0)
-                AirWars.state = 5;
+            if (healthPoint <= 0) {
+                GameUtils.removeList.add(AirWars.boss01Obj);
+            }
         }
         //血条白色背景
         gImage.setColor(Color.white);

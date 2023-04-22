@@ -41,11 +41,17 @@ public class AirWars extends JFrame {
     public static int score = 0;
     //敌机出现数量
     int enemyCount = 0;
+    //定义我方子弹速度
+    int Vur = 15;
+    //定义敌方飞机子弹速度
+    int Ven = 50;
 
-    //背景图对象
-    BgObj bgObj = new BgObj(GameUtils.bgImg001,0,-3375,3);
+    //背景图01对象
+    Bg01Obj bg01Obj = new Bg01Obj(GameUtils.bgImg001,0,-3375,3);
+    //背景图01对象
+    Bg02Obj bg02Obj = new Bg02Obj(GameUtils.bgImg002,0,-3375,3);
     //创建Boss
-    public BossObj bossObj;
+    public static Boss01Obj boss01Obj;
     //创建敌机对象
     public EnemyObj enemyObj;
     //创建我方飞机对象
@@ -61,7 +67,8 @@ public class AirWars extends JFrame {
         //设置窗口标题
         this.setTitle("飞机大战 AirWars");
 
-        GameUtils.gameObjList.add(bgObj);
+        GameUtils.gameObjList.add(bg01Obj);
+        GameUtils.gameObjList.add(bg02Obj);
         GameUtils.gameObjList.add(planeObj);
         //GameUtils.gameObjList.add(bossObj);
 
@@ -148,7 +155,7 @@ public class AirWars extends JFrame {
         }
         if (state == 5){
             //下一关
-            gImage.drawImage(GameUtils.epImg,bossObj.getX(),bossObj.getY()-20,null);
+            gImage.drawImage(GameUtils.epImg,boss01Obj.getX(),boss01Obj.getY()-20,null);
             gImage.setColor(Color.green);
             gImage.setFont(new Font("楷书",Font.BOLD,60));
             gImage.drawString("Success",125,320);
@@ -162,7 +169,7 @@ public class AirWars extends JFrame {
             gImage.drawImage(GameUtils.epImg,planeObj.getX(),planeObj.getY()-20,null);
             gImage.setColor(Color.RED);
             gImage.setFont(new Font("楷书",Font.BOLD,60));
-            gImage.drawString("FAILED",137,380);
+            gImage.drawString("FAILED",134,380);
         }
 
         if (state != 7)
@@ -174,24 +181,24 @@ public class AirWars extends JFrame {
 
     void createObj(){
         //我方子弹
-        if (count % 15 == 0) {
+        if (count % Vur == 0) {
             GameUtils.shellObjList.add(new ShellObj(GameUtils.urShellImg, planeObj.getX() + 13, planeObj.getY() - 16, 14, 29, 8, this));
             GameUtils.gameObjList.add(GameUtils.shellObjList.get(GameUtils.shellObjList.size() - 1));
         }
         //Boss子弹
-        if ((count % 45 == 0) && (bossObj != null)) {
-            GameUtils.enBulletObjList.add(new BulletObj((GameUtils.enBulletImg), bossObj.getX() + 60, bossObj.getY() + 50, 25, 47, 5, this));
+        if ((count % 45 == 0) && (boss01Obj != null)) {
+            GameUtils.enBulletObjList.add(new BulletObj((GameUtils.enBulletImg), boss01Obj.getX() + 60, boss01Obj.getY() + 50, 25, 47, 5, this));
             GameUtils.gameObjList.add(GameUtils.enBulletObjList.get(GameUtils.enBulletObjList.size() - 1));
         }
         //敌机
-        if (count % 80 == 0) {
+        if (count % Ven == 0) {
             enemyObj = new EnemyObj(GameUtils.enemyImg,(int) ((Math.random()*10)*36),0,89,70,5,this);
             GameUtils.enemyObjList.add(enemyObj);
             GameUtils.gameObjList.add(GameUtils.enemyObjList.get(GameUtils.enemyObjList.size() - 1));
             enemyCount++;
         }
         //敌机子弹
-        if (count % 80 == 0){
+        if (count % Ven == 0){
             int v = 7;
             for(int i = 1; i <= 2; i++){
                 GameUtils.enShellObjList.add(new EnShellObj((GameUtils.enShellImg),enemyObj.getX()+40,enemyObj.getY()+60,21,25,v,this));
@@ -200,9 +207,9 @@ public class AirWars extends JFrame {
             }
         }
         //召唤Boss
-        if ((score != 0) && (score % 50 == 0) && (bossObj == null)) {
-            bossObj = new BossObj(GameUtils.bossImg001,250,25,157,109,5,this);
-            GameUtils.gameObjList.add(bossObj);
+        if (score == 50) {
+            boss01Obj = new Boss01Obj(GameUtils.bossImg001,250,25,157,109,5,this);
+            GameUtils.gameObjList.add(boss01Obj);
         }
     }
     public static void main(String[] args) {
