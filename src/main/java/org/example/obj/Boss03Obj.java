@@ -3,11 +3,11 @@ import org.example.AirWars;
 import org.example.utils.GameUtils;
 import  java.awt.*;
 
-import static org.example.AirWars.boss01Obj;
+import static org.example.AirWars.*;
 
-public class Boss01Obj extends GameObj{
-    public static int healthPoint01 = 20;
-    public Boss01Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
+public class Boss03Obj extends GameObj{
+    public static int healthPoint03 = 75;
+    public Boss03Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }
 
@@ -22,19 +22,18 @@ public class Boss01Obj extends GameObj{
                 ExplodeObj explodeObj = new ExplodeObj(x,y);
                 GameUtils.explodeObjList.add(explodeObj);
                 GameUtils.removeList.add(explodeObj);
-                shellObj.setX(-1000);
-                shellObj.setY(1000);
+                shellObj.setX(-1005);
+                shellObj.setY(1005);
                 GameUtils.removeList.add(shellObj);
-                healthPoint01--;
+                healthPoint03--;
             }
-            if (healthPoint01 == 0) {
-                healthPoint01 = -1;
-                gImage.drawImage(GameUtils.epImg,boss01Obj.getX(),boss01Obj.getY()-20,null);
-                boss01Obj.setX(-2222);
-                boss01Obj.setY(2222);
-                GameUtils.removeList.add(boss01Obj);
-                AirWars.score = AirWars.score + 10;
+            if (healthPoint03 == 0) {
+                healthPoint03 = -1;
+                gImage.drawImage(GameUtils.epImg,boss03Obj.getX(),boss03Obj.getY()-20,null);
+                GameUtils.removeList.add(boss03Obj);
+                AirWars.score = AirWars.score + 30;
                 PlaneObj.urHP = 10;
+                state = 3;
             }
         }
         //血条白色背景
@@ -42,7 +41,7 @@ public class Boss01Obj extends GameObj{
         gImage.fillRect(20,40,10, 10);
         //血条的绘制
         gImage.setColor(Color.red);
-        gImage.fillRect(20,40,healthPoint01 * 100 / 20, 10);
+        gImage.fillRect(20,40,healthPoint03 * 100 / 75, 10);
     }
 
     @Override

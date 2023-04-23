@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 
 public class PlaneObj extends GameObj{
     //己方战机血量：1
-    static int urHP = 3;
+    static int urHP = 10;
 
     @Override
     public Image getImg() {
@@ -48,6 +48,13 @@ public class PlaneObj extends GameObj{
             AirWars.state = 7;
         if (urHP == 0)
             AirWars.state = 7;
+
+        //血条白色背景
+        gImage.setColor(Color.white);
+        gImage.fillRect(300,40,100, 10);
+        //血条的绘制
+        gImage.setColor(Color.green);
+        gImage.fillRect(300,40,urHP * 10, 10);
     }
 
     @Override
