@@ -30,6 +30,8 @@ public class Boss03Obj extends GameObj{
             if (healthPoint03 == 0) {
                 healthPoint03 = -1;
                 gImage.drawImage(GameUtils.epImg,boss03Obj.getX(),boss03Obj.getY()-20,null);
+                boss03Obj.setX(-8222);
+                boss03Obj.setY(8222);
                 GameUtils.removeList.add(boss03Obj);
                 AirWars.score = AirWars.score + 30;
                 PlaneObj.urHP = 10;

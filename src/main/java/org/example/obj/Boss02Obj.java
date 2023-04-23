@@ -30,9 +30,13 @@ public class Boss02Obj extends GameObj{
             if (healthPoint02 == 0) {
                 healthPoint02 = -1;
                 gImage.drawImage(GameUtils.epImg,boss02Obj.getX(),boss02Obj.getY()-20,null);
+                boss02Obj.setX(-2553);
+                boss02Obj.setY(2553);
                 GameUtils.removeList.add(boss02Obj);
                 AirWars.score = AirWars.score + 10;
                 PlaneObj.urHP = 10;
+                Vur = 12;
+                Ven = 40;
             }
         }
         //血条白色背景

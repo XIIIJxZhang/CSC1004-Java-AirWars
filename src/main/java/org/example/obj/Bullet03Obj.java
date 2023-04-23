@@ -14,7 +14,7 @@ public class Bullet03Obj extends GameObj{
         y += speed;
         //子弹撞击我方飞机
         if (this.getRec().intersects(this.frame.planeObj.getRec()))
-            PlaneObj.urHP = PlaneObj.urHP - 3;
+            PlaneObj.urHP = PlaneObj.urHP - 8;
         if ((y > 645) || (Boss03Obj.healthPoint03 == 0)){
             this.x = -1000;
             this.y = 1000;

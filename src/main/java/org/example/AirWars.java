@@ -42,14 +42,14 @@ public class AirWars extends JFrame {
     //敌机出现数量
     int enemyCount = 0;
     //定义我方子弹速度
-    public static int Vur = 5;
+    public static int Vur = 20;
     //定义敌方飞机速度
-    public static int Ven = 50;
+    public static int Ven = 60;
 
     //背景图01对象
-    public static Bg01Obj bg01Obj = new Bg01Obj(GameUtils.bgImg001,0,-3375,3);
+    public static Bg01Obj bg01Obj = new Bg01Obj(GameUtils.bgImg001,0,-3375,4);
     //背景图01对象
-    public static Bg02Obj bg02Obj = new Bg02Obj(GameUtils.bgImg002,0,-3375,3);
+    public static Bg02Obj bg02Obj = new Bg02Obj(GameUtils.bgImg002,0,-3375,6);
     //创建Boss01
     public static Boss01Obj boss01Obj;
     //创建Boss02
@@ -209,8 +209,12 @@ public class AirWars extends JFrame {
     void createObj(){
         //我方子弹
         if (count % Vur == 0) {
-            GameUtils.shellObjList.add(new ShellObj(GameUtils.urShellImg, planeObj.getX() + 13, planeObj.getY() - 16, 14, 29, 8, this));
-            GameUtils.gameObjList.add(GameUtils.shellObjList.get(GameUtils.shellObjList.size() - 1));
+            int m = 8;
+            for (int i = 0; i < 2; i++) {
+                m += 2;
+                GameUtils.shellObjList.add(new ShellObj(GameUtils.urShellImg, planeObj.getX() + 13, planeObj.getY() - 16, 14, 29, m, this));
+                GameUtils.gameObjList.add(GameUtils.shellObjList.get(GameUtils.shellObjList.size() - 1));
+            }
         }
         //Boss01子弹
         if ((count % 60 == 0) && (boss01Obj != null)) {
@@ -219,13 +223,13 @@ public class AirWars extends JFrame {
         }
         //Boss02子弹
         if ((count % 60 == 0) && (boss02Obj != null)) {
-            GameUtils.enBullet01ObjList.add(new Bullet01Obj((GameUtils.enBullet02Img), boss02Obj.getX() + 60, boss02Obj.getY() + 50, 20, 45, 5, this));
-            GameUtils.gameObjList.add(GameUtils.enBullet01ObjList.get(GameUtils.enBullet01ObjList.size() - 1));
+            GameUtils.enBullet02ObjList.add(new Bullet02Obj((GameUtils.enBullet02Img), boss02Obj.getX() + 60, boss02Obj.getY() + 50, 21, 59, 5, this));
+            GameUtils.gameObjList.add(GameUtils.enBullet02ObjList.get(GameUtils.enBullet02ObjList.size() - 1));
         }
         //Boss03子弹
         if ((count % 60 == 0) && (boss03Obj != null)) {
-            GameUtils.enBullet01ObjList.add(new Bullet01Obj((GameUtils.enBullet03Img), boss03Obj.getX() + 60, boss03Obj.getY() + 50, 20, 45, 5, this));
-            GameUtils.gameObjList.add(GameUtils.enBullet01ObjList.get(GameUtils.enBullet01ObjList.size() - 1));
+            GameUtils.enBullet03ObjList.add(new Bullet03Obj((GameUtils.enBullet03Img), boss03Obj.getX() + 60, boss03Obj.getY() + 50, 37, 40, 5, this));
+            GameUtils.gameObjList.add(GameUtils.enBullet03ObjList.get(GameUtils.enBullet03ObjList.size() - 1));
         }
         //敌机
         if (count % Ven == 0) {
@@ -240,7 +244,7 @@ public class AirWars extends JFrame {
             for(int i = 1; i <= 2; i++){
                 GameUtils.enShellObjList.add(new EnShellObj((GameUtils.enShellImg),enemyObj.getX()+40,enemyObj.getY()+60,21,25,v,this));
                 GameUtils.gameObjList.add(GameUtils.enShellObjList.get(GameUtils.enShellObjList.size() - 1));
-                v = v + 2;
+                v += 2;
             }
         }
         //召唤Boss01
@@ -250,14 +254,14 @@ public class AirWars extends JFrame {
         }
 
         //召唤Boss02
-        if ((score == 75) && (boss02Obj == null)) {
+        if ((score == 90) && (boss02Obj == null)) {
             boss02Obj = new Boss02Obj(GameUtils.bossImg002,250,25,197,134,5,this);
             GameUtils.gameObjList.add(boss02Obj);
         }
 
         //召唤Boss03
         if ((score == 200) && (boss03Obj == null)) {
-            boss03Obj = new Boss03Obj(GameUtils.bossImg003,250,25,332,232,5,this);
+            boss03Obj = new Boss03Obj(GameUtils.bossImg003,250,25,258,180,5,this);
             GameUtils.gameObjList.add(boss03Obj);
         }
 

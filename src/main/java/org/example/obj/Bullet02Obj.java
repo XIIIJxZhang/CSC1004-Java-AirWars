@@ -14,10 +14,10 @@ public class Bullet02Obj extends GameObj{
         y += speed;
         //子弹撞击我方飞机
         if (this.getRec().intersects(this.frame.planeObj.getRec()))
-            PlaneObj.urHP = PlaneObj.urHP - 3;
-        if ((y > 645) || (Boss02Obj.healthPoint02 == 0)){
-            this.x = -1000;
-            this.y = 1000;
+            PlaneObj.urHP = PlaneObj.urHP - 5;
+        if ((y > 645) || (Boss02Obj.healthPoint02 == -1)){
+            this.x = -1077;
+            this.y = 1077;
             GameUtils.removeList.add(this);
         }
     }
