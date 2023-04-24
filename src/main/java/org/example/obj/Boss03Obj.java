@@ -33,7 +33,7 @@ public class Boss03Obj extends GameObj{
                 boss03Obj.setX(-8222);
                 boss03Obj.setY(8222);
                 GameUtils.removeList.add(boss03Obj);
-                AirWars.score = AirWars.score + 30;
+                AirWars.score = AirWars.score + 50;
                 PlaneObj.urHP = 18;
                 state = 3;
             }
