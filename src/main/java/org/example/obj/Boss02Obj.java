@@ -19,7 +19,7 @@ public class Boss02Obj extends GameObj{
         x += speed;
         for (ShellObj shellObj: GameUtils.shellObjList) {
             if (this.getRec().intersects(shellObj.getRec())){
-                ExplodeObj explodeObj = new ExplodeObj(x,y);
+                ExplodeObj explodeObj = new ExplodeObj(x+70,y+20);
                 GameUtils.explodeObjList.add(explodeObj);
                 GameUtils.removeList.add(explodeObj);
                 shellObj.setX(-1001);
@@ -34,7 +34,7 @@ public class Boss02Obj extends GameObj{
                 boss02Obj.setY(2553);
                 GameUtils.removeList.add(boss02Obj);
                 AirWars.score = AirWars.score + 10;
-                PlaneObj.urHP = 10;
+                PlaneObj.urHP = 15;
                 Vur = 12;
                 Ven = 40;
             }

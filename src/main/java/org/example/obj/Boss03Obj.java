@@ -6,7 +6,7 @@ import  java.awt.*;
 import static org.example.AirWars.*;
 
 public class Boss03Obj extends GameObj{
-    public static int healthPoint03 = 75;
+    public static int healthPoint03 = 5;
     public Boss03Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }
@@ -19,7 +19,7 @@ public class Boss03Obj extends GameObj{
         x += speed;
         for (ShellObj shellObj: GameUtils.shellObjList) {
             if (this.getRec().intersects(shellObj.getRec())){
-                ExplodeObj explodeObj = new ExplodeObj(x,y);
+                ExplodeObj explodeObj = new ExplodeObj(x+100,y+20);
                 GameUtils.explodeObjList.add(explodeObj);
                 GameUtils.removeList.add(explodeObj);
                 shellObj.setX(-1005);
@@ -34,7 +34,7 @@ public class Boss03Obj extends GameObj{
                 boss03Obj.setY(8222);
                 GameUtils.removeList.add(boss03Obj);
                 AirWars.score = AirWars.score + 30;
-                PlaneObj.urHP = 10;
+                PlaneObj.urHP = 18;
                 state = 3;
             }
         }

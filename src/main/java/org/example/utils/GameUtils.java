@@ -20,6 +20,12 @@ public class GameUtils {
     public static Image bossImg002 = new ImageIcon("imgs\\boss002.png").getImage();
     //Boss003图片
     public static Image bossImg003 = new ImageIcon("imgs\\boss003.png").getImage();
+    //Boss003图片
+    public static Image bossImg004 = new ImageIcon("imgs\\boss003.png").getImage();
+    //Boss003图片
+    public static Image bossImg005 = new ImageIcon("imgs\\boss003.png").getImage();
+    //Boss003图片
+    public static Image bossImg006 = new ImageIcon("imgs\\boss003.png").getImage();
     //爆炸图片GIF
     public static Image epImg = new ImageIcon("imgs\\explode.gif").getImage();
     //我方战斗机图片
@@ -41,6 +47,7 @@ public class GameUtils {
 
     //所有游戏物体集合
     public static List<GameObj> gameObjList = new ArrayList<>();
+    public static List<GameObj> gameObj02List = new ArrayList<>();
     //删除消失的集合
     public static List<GameObj> removeList = new ArrayList<>();
     //我方子弹集合

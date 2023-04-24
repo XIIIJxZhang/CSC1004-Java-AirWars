@@ -19,7 +19,7 @@ public class EnShellObj extends GameObj{
             this.y = 666;
             GameUtils.removeList.add(this);
         }
-        //子弹撞击我方子弹
+        //敌方子弹撞击我方子弹
         for (ShellObj shellObj: GameUtils.shellObjList) {
             if ((this.getRec().intersects(shellObj.getRec()))){
                 ExplodeObj explodeObj = new ExplodeObj(x,y);
