@@ -36,6 +36,7 @@ public class Boss06Obj extends GameObj{
                 AirWars.score = AirWars.score + 100;
                 PlaneObj.urHP = 12;
                 AirWars.Ven = 50;
+                AirWars.state = 4;
             }
         }
         //血条白色背景

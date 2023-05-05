@@ -38,6 +38,10 @@ public class AirWars extends JFrame {
     public static Boss01Obj boss01Obj;
     //创建Boss02
     public static Boss02Obj boss02Obj;
+    //创建Boss02子弹01
+    public static Bullet02Obj bullet0201Obj;
+    //创建Boss02子弹02
+    public static Bullet02Obj bullet0202Obj;
     //创建Boss03
     public static Boss03Obj boss03Obj;
     //创建Boss04
@@ -50,7 +54,9 @@ public class AirWars extends JFrame {
     public EnemyObj enemyObj;
     //创建我方飞机对象
     public PlaneObj planeObj = new PlaneObj(GameUtils.urPlaneImg,212,550,26,28,0,this);
-    //转场动画
+    //转场动画1
+    public Plane000Obj plane000Obj = new Plane000Obj(GameUtils.urPlaneImg,212,600,26,28,0.5,this);
+    //转场动画2
     public Plane000Obj plane00Obj = new Plane000Obj(GameUtils.urPlaneImg,212,600,26,28,0.5,this);
 
     public void launch(){
@@ -170,7 +176,7 @@ public class AirWars extends JFrame {
             }
             GameUtils.gameObjList.removeAll(GameUtils.gameObjList);
             GameUtils.gameObjList.add(bg01Obj);
-            GameUtils.gameObjList.add(plane00Obj);
+            GameUtils.gameObjList.add(plane000Obj);
             repaint();
             GameUtils.gameObjList.addAll(GameUtils.explodeObjList);
             for (int i = 0; i < GameUtils.gameObjList.size(); i++)
@@ -189,7 +195,30 @@ public class AirWars extends JFrame {
             });
         }
         if (state == 4){
-
+            try {
+                Thread.sleep(25);
+            }   catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            GameUtils.gameObjList.removeAll(GameUtils.gameObjList);
+            GameUtils.gameObjList.add(bg02Obj);
+            GameUtils.gameObjList.add(plane00Obj);
+            repaint();
+            GameUtils.gameObjList.addAll(GameUtils.explodeObjList);
+            for (int i = 0; i < GameUtils.gameObjList.size(); i++)
+                GameUtils.gameObjList.get(i).paintSelf(gImage);
+            GameUtils.gameObjList.removeAll(GameUtils.removeList);
+            //鼠标点击
+            this.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    //游戏第一关结束情况下点击鼠标左键
+                    if (e.getButton() == 1 && state == 3){
+                        state = 5;  //游戏继续
+                        repaint();
+                    }
+                }
+            });
         }
         if (state == 5){
             GameUtils.gameObj02List.addAll(GameUtils.explodeObjList);
@@ -232,8 +261,12 @@ public class AirWars extends JFrame {
         }
         //Boss02子弹
         if ((count % 60 == 0) && (boss02Obj != null)) {
-            GameUtils.enBullet02ObjList.add(new Bullet02Obj((GameUtils.enBullet02Img), boss02Obj.getX() + 60, boss02Obj.getY() + 50, 21, 59, 5, this));
-            GameUtils.gameObjList.add(GameUtils.enBullet02ObjList.get(GameUtils.enBullet02ObjList.size() - 1));
+            bullet0201Obj = new Bullet02Obj(GameUtils.enBullet02Img, boss02Obj.getX(), boss02Obj.getY() + 50, 21, 59, 5, this);
+            bullet0202Obj = new Bullet02Obj(GameUtils.enBullet02Img, boss02Obj.getX() + 120, boss02Obj.getY() + 50, 21, 59, 5, this);
+            GameUtils.enBullet0201ObjList.add(bullet0201Obj);
+            GameUtils.enBullet0202ObjList.add(bullet0202Obj);
+            GameUtils.gameObjList.add(GameUtils.enBullet0201ObjList.get(GameUtils.enBullet0201ObjList.size() - 1));
+            GameUtils.gameObjList.add(GameUtils.enBullet0202ObjList.get(GameUtils.enBullet0202ObjList.size() - 1));
         }
         //Boss03子弹
         if ((count % 60 == 0) && (boss03Obj != null)) {
@@ -292,8 +325,8 @@ public class AirWars extends JFrame {
         }
         //Boss05子弹
         if ((count % 60 == 0) && (boss05Obj != null)) {
-            GameUtils.enBullet02ObjList.add(new Bullet02Obj((GameUtils.enBullet02Img), boss05Obj.getX() + 60, boss05Obj.getY() + 50, 21, 59, 5, this));
-            GameUtils.gameObj02List.add(GameUtils.enBullet02ObjList.get(GameUtils.enBullet02ObjList.size() - 1));
+            GameUtils.enBullet0201ObjList.add(new Bullet02Obj((GameUtils.enBullet02Img), boss05Obj.getX() + 60, boss05Obj.getY() + 50, 21, 59, 5, this));
+            GameUtils.gameObj02List.add(GameUtils.enBullet0201ObjList.get(GameUtils.enBullet0201ObjList.size() - 1));
         }
         //Boss06子弹
         if ((count % 60 == 0) && (boss06Obj != null)) {

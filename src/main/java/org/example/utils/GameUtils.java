@@ -57,7 +57,8 @@ public class GameUtils {
     //Boss01子弹集合
     public static List<Bullet01Obj> enBullet01ObjList = new ArrayList<>();
     //Boss02子弹集合
-    public static List<Bullet02Obj> enBullet02ObjList = new ArrayList<>();
+    public static List<Bullet02Obj> enBullet0201ObjList = new ArrayList<>();
+    public static List<Bullet02Obj> enBullet0202ObjList = new ArrayList<>();
     //Boss01子弹集合
     public static List<Bullet03Obj> enBullet03ObjList = new ArrayList<>();
     //敌方子弹集合
