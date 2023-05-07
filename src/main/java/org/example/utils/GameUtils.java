@@ -20,12 +20,12 @@ public class GameUtils {
     public static Image bossImg002 = new ImageIcon("imgs\\boss002.png").getImage();
     //Boss003图片
     public static Image bossImg003 = new ImageIcon("imgs\\boss003.png").getImage();
-    //Boss003图片
-    public static Image bossImg004 = new ImageIcon("imgs\\boss003.png").getImage();
-    //Boss003图片
-    public static Image bossImg005 = new ImageIcon("imgs\\boss003.png").getImage();
-    //Boss003图片
-    public static Image bossImg006 = new ImageIcon("imgs\\boss003.png").getImage();
+    //Boss004图片
+    public static Image bossImg004 = new ImageIcon("imgs\\boss004.png").getImage();
+    //Boss005图片
+    public static Image bossImg005 = new ImageIcon("imgs\\boss005.png").getImage();
+    //Boss006图片
+    public static Image bossImg006 = new ImageIcon("imgs\\boss006.png").getImage();
     //爆炸图片GIF
     public static Image epImg = new ImageIcon("imgs\\explode.gif").getImage();
     //我方战斗机图片
@@ -59,8 +59,15 @@ public class GameUtils {
     //Boss02子弹集合
     public static List<Bullet02Obj> enBullet0201ObjList = new ArrayList<>();
     public static List<Bullet02Obj> enBullet0202ObjList = new ArrayList<>();
-    //Boss01子弹集合
+    //Boss03子弹集合
     public static List<Bullet03Obj> enBullet03ObjList = new ArrayList<>();
+    //Boss04子弹集合
+    public static List<Bullet03Obj> enBullet04ObjList = new ArrayList<>();
+    //Boss05子弹集合
+    public static List<Bullet03Obj> enBullet05ObjList = new ArrayList<>();
+    //Boss06子弹集合
+    public static List<Bullet03Obj> enBullet06ObjList = new ArrayList<>();
+
     //敌方子弹集合
     public static List<EnShellObj> enShellObjList = new ArrayList<>();
     //敌机爆炸集合
