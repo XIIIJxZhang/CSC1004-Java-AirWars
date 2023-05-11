@@ -1,4 +1,7 @@
 package org.example;
+
+import org.example.login.LoginDemo;
+import org.example.login.UserLogin;
 import org.example.obj.*;
 import org.example.utils.GameUtils;
 
@@ -8,13 +11,18 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.*;
+
+import static org.example.login.UserLogin.*;
 
 public class AirWars extends JFrame {
 
     //游戏状态：0 未开始 1 登录界面 2 游戏中 3 转场动画1 4 转场动画2 5 第二关 6 第三关 7 失败 8 第三关
     //暂停模式：10 关卡1 11 关卡2 12 关卡3
     //默认状态：未开始
-    public static int state = 0;
+    public static int state = 1;
+    PreparedStatement upd;
+    PreparedStatement ck;
     Image offScreenImage = null;
 
     int width = 450;
@@ -68,12 +76,6 @@ public class AirWars extends JFrame {
         this.setLocationRelativeTo(null);
         //设置窗口标题
         this.setTitle("飞机大战 AirWars");
-
-        GameUtils.gameObjList.add(bg01Obj);
-        GameUtils.gameObj02List.add(bg02Obj);
-        GameUtils.gameObjList.add(planeObj);
-        GameUtils.gameObj02List.add(planeObj);
-
         //键盘操作
         this.addKeyListener(new KeyAdapter() {
             @Override
@@ -108,7 +110,7 @@ public class AirWars extends JFrame {
         });
 
         while(true){
-            if (state == 2){
+            if ((state == 2) || (state == 0)){
                 createObj();
                 repaint();
             }
@@ -125,6 +127,7 @@ public class AirWars extends JFrame {
     }
     @Override
     public void paint(Graphics g) {
+
         if (offScreenImage == null)
             offScreenImage = createImage(width,height);
 
@@ -133,13 +136,32 @@ public class AirWars extends JFrame {
 
         //游戏未开始时
         if (state == 0){
+            GameUtils.gameObjList.addAll(GameUtils.explodeObjList);
+            for (int i = 0; i < GameUtils.gameObjList.size(); i++)
+                GameUtils.gameObjList.get(i).paintSelf(gImage);
+            GameUtils.gameObjList.removeAll(GameUtils.removeList);
+        }
+
+        if (state == 1){
+            UserLogin userLogin = new UserLogin();
+            userLogin.getConnection();
+            //界面渲染效果
+            String lookAndFeel = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
+            try {
+                UIManager.setLookAndFeel(lookAndFeel);
+                new LoginDemo();
+            } catch (ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException | IllegalAccessException e) {
+                JOptionPane.showMessageDialog(null, "系统异常", "警告", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        if (state == 2){
             //鼠标点击
             this.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     //游戏未开始情况下点击鼠标左键
-                    if (e.getButton() == 1 && state == 0){
-                        state = 2;  //游戏开始
+                    if (e.getButton() == 1 && state == 2){
+                        state = 0;  //游戏开始
                         repaint();
                     }
                 }
@@ -156,17 +178,11 @@ public class AirWars extends JFrame {
             gImage.setColor(Color.orange);
             gImage.setFont(new Font("华文隶书",Font.BOLD,45));
             gImage.drawString("AirWars",140,200);
-        }
-
-        if (state == 1){
-            //登录界面还在调试......
-        }
-        if (state == 2){
-            //游戏开始
-            GameUtils.gameObjList.addAll(GameUtils.explodeObjList);
-            for (int i = 0; i < GameUtils.gameObjList.size(); i++)
-                GameUtils.gameObjList.get(i).paintSelf(gImage);
-            GameUtils.gameObjList.removeAll(GameUtils.removeList);
+            GameUtils.gameObjList.removeAll(GameUtils.gameObjList);
+            GameUtils.gameObjList.add(bg01Obj);
+            GameUtils.gameObj02List.add(bg02Obj);
+            GameUtils.gameObjList.add(planeObj);
+            GameUtils.gameObj02List.add(planeObj);
         }
         if (state == 3){
             try {
@@ -231,6 +247,27 @@ public class AirWars extends JFrame {
         }
         if (state == 7){
             //失败
+            try(Connection conn = DriverManager.getConnection(URL, USER_NAME, PASSWORD)){
+                String sql01 = "select Score from airwars.mytable1 where Account = ?";
+                PreparedStatement ps = conn.prepareStatement(sql01);
+                ps.setString(1, UserLogin.str);
+                ResultSet rs = ps.executeQuery();
+                if(rs.next()) {
+                    int oldScore = rs.getInt("Score");
+                    if(score > oldScore) {
+                        String sql02 = "update airwars.mytable1 set Score = ? where Account = ?";
+                        PreparedStatement upd = conn.prepareStatement(sql02);
+                        upd.setString(2, UserLogin.str);
+                        upd.setString(1, String.valueOf(score));
+                        upd.executeUpdate();
+                        JOptionPane.showMessageDialog(null, "Your final score is " + score, "Notice", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Your final score is " + score, "Notice", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Your final score is " + score);
+            }
             gImage.drawImage(GameUtils.epImg,planeObj.getX(),planeObj.getY()-20,null);
             gImage.setColor(Color.RED);
             gImage.setFont(new Font("楷书",Font.BOLD,60));

@@ -44,9 +44,7 @@ public class PlaneObj extends GameObj{
                 urHP--;
             }
         }
-        if ((this.frame.boss01Obj != null) && (this.getRec().intersects(this.frame.boss01Obj.getRec())))
-            AirWars.state = 7;
-        if (urHP == 0)
+        if (urHP <= 0)
             AirWars.state = 7;
 
         //血条白色背景
