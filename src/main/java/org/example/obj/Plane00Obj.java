@@ -3,7 +3,10 @@ package org.example.obj;
 import org.example.AirWars;
 import org.example.utils.GameUtils;
 
+import javax.swing.*;
 import java.awt.*;
+
+import static org.example.AirWars.score;
 
 public class Plane00Obj extends GameObj{
     public Plane00Obj() {
@@ -26,9 +29,9 @@ public class Plane00Obj extends GameObj{
             this.y = -525;
             GameUtils.removeList.add(this);
             gImage.setColor(Color.green);
-            gImage.setFont(new Font("楷书",Font.BOLD,60));
-            gImage.drawString("大爷~还没玩够？",120,320);
-            gImage.drawString("Infinite Mode",100,380);
+            gImage.setFont(new Font("楷书",Font.BOLD,40));
+            gImage.drawString("大爷~还没玩够？",80,220);
+            gImage.drawString("没有了边玩去吧...",70,520);
         }
     }
 

@@ -6,7 +6,7 @@ import  java.awt.*;
 import static org.example.AirWars.boss05Obj;
 
 public class Boss05Obj extends GameObj{
-    public static int healthPoint05 = 20;
+    public static int healthPoint05 = 120;
     public Boss05Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }
@@ -43,7 +43,7 @@ public class Boss05Obj extends GameObj{
         gImage.fillRect(20,40,10, 10);
         //血条的绘制
         gImage.setColor(Color.red);
-        gImage.fillRect(20,40,healthPoint05 * 100 / 20, 10);
+        gImage.fillRect(20,40,healthPoint05 * 100 / 60, 10);
     }
 
     @Override
