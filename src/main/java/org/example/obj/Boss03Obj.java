@@ -6,7 +6,7 @@ import  java.awt.*;
 import static org.example.AirWars.*;
 
 public class Boss03Obj extends GameObj{
-    public static int healthPoint03 = 8;
+    public static int healthPoint03 = 80;
     public Boss03Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }

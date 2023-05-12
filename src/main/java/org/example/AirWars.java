@@ -264,6 +264,16 @@ public class AirWars extends JFrame {
             for (int i = 0; i < GameUtils.gameObjList.size(); i++)
                 GameUtils.gameObjList.get(i).paintSelf(gImage);
             GameUtils.gameObjList.removeAll(GameUtils.removeList);
+            this.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    //游戏第一关结束情况下点击鼠标左键
+                    if (e.getButton() == 1 && state == 4){
+                        state = 6;  //游戏继续
+                        repaint();
+                    }
+                }
+            });
 
             //鼠标点击
         }
@@ -280,6 +290,11 @@ public class AirWars extends JFrame {
             GameUtils.gameObj02List.removeAll(GameUtils.removeList);
         }
         if (state == 6){
+            gImage.drawImage(GameUtils.bgImg002, 0, 0, null);
+            gImage.setColor(Color.green);
+            gImage.setFont(new Font("楷书",Font.BOLD,60));
+            gImage.drawString("Success",125,320);
+            gImage.drawString("胜利啦！！",100,380);
         }
         if (state == 7){
             //失败
@@ -380,7 +395,7 @@ public class AirWars extends JFrame {
         }
 
         //召唤Boss03
-        if ((score == 2) && (boss03Obj == null)) {
+        if ((score == 150) && (boss03Obj == null)) {
             boss03Obj = new Boss03Obj(GameUtils.bossImg003,250,25,241,188,5,this);
             GameUtils.gameObjList.add(boss03Obj);
         }
@@ -452,7 +467,7 @@ public class AirWars extends JFrame {
         }
 
         //召唤Boss06
-        if ((score == 100) && (boss06Obj == null)) {
+        if ((score == 600) && (boss06Obj == null)) {
             boss06Obj = new Boss06Obj(GameUtils.bossImg006, 250, 25, 157, 109, 8, this);
             GameUtils.gameObj02List.add(boss06Obj);
         }

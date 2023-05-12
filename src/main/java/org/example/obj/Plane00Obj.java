@@ -28,7 +28,7 @@ public class Plane00Obj extends GameObj{
             this.x = 525;
             this.y = -525;
             GameUtils.removeList.add(this);
-            gImage.setColor(Color.green);
+            gImage.setColor(Color.yellow);
             gImage.setFont(new Font("楷书",Font.BOLD,40));
             gImage.drawString("大爷~还没玩够？",80,220);
             gImage.drawString("没有了边玩去吧...",70,520);
