@@ -383,19 +383,19 @@ public class AirWars extends JFrame {
             }
         }
         //召唤Boss01
-        if ((score == 25) && (boss01Obj == null)) {
+        if ((score == 25 || score == 26) && (boss01Obj == null)) {
             boss01Obj = new Boss01Obj(GameUtils.bossImg001,250,25,157,109,5,this);
             GameUtils.gameObjList.add(boss01Obj);
         }
 
         //召唤Boss02
-        if ((score == 75) && (boss02Obj == null)) {
+        if ((score == 75 || score == 76) && (boss02Obj == null)) {
             boss02Obj = new Boss02Obj(GameUtils.bossImg002,250,25,197,134,5,this);
             GameUtils.gameObjList.add(boss02Obj);
         }
 
         //召唤Boss03
-        if ((score == 150) && (boss03Obj == null)) {
+        if ((score == 150 || score == 151) && (boss03Obj == null)) {
             boss03Obj = new Boss03Obj(GameUtils.bossImg003,250,25,241,188,5,this);
             GameUtils.gameObjList.add(boss03Obj);
         }
@@ -455,19 +455,19 @@ public class AirWars extends JFrame {
             }
         }
         //召唤Boss04
-        if ((score == 300) && (boss04Obj == null)) {
+        if ((score == 300 || score == 301) && (boss04Obj == null)) {
             boss04Obj = new Boss04Obj(GameUtils.bossImg004,250,25,255,196,6,this);
             GameUtils.gameObj02List.add(boss04Obj);
         }
 
         //召唤Boss05
-        if ((score == 450) && (boss05Obj == null)) {
+        if ((score == 450 || score == 451) && (boss05Obj == null)) {
             boss05Obj = new Boss05Obj(GameUtils.bossImg005,250,25,226,197,7,this);
             GameUtils.gameObj02List.add(boss05Obj);
         }
 
         //召唤Boss06
-        if ((score == 600) && (boss06Obj == null)) {
+        if ((score == 600 || score == 601) && (boss06Obj == null)) {
             boss06Obj = new Boss06Obj(GameUtils.bossImg006, 250, 25, 157, 109, 8, this);
             GameUtils.gameObj02List.add(boss06Obj);
         }

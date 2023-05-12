@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737014c6-0a5b-4e1d-92f0-fd91e7099ccd" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/Introduction Video/Introduction Video.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AirWars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/Boss03Obj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Boss03Obj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/Boss06Obj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Boss06Obj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/obj/Plane00Obj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/obj/Plane00Obj.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <workItem from="1683726113936" duration="10752000" />
       <workItem from="1683800400923" duration="10979000" />
       <workItem from="1683821157432" duration="11362000" />
-      <workItem from="1683861840989" duration="14992000" />
+      <workItem from="1683861840989" duration="17237000" />
     </task>
     <task id="LOCAL-00005" summary="update">
       <created>1676996933139</created>
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683883353714</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update">
+      <created>1683885058705</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683885058705</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
