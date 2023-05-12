@@ -35,7 +35,7 @@ public class Boss05Obj extends GameObj{
                 GameUtils.removeList.add(boss05Obj);
                 AirWars.score = AirWars.score + 80;
                 PlaneObj.urHP = 12;
-                AirWars.Ven = 50;
+                AirWars.Ven02 = 30;
             }
         }
         //血条白色背景

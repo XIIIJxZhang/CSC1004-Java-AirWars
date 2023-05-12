@@ -24,7 +24,7 @@ public class GameUtils {
     public static Image bossImg004 = new ImageIcon("imgs\\boss004.png").getImage();
     //Boss005图片
     public static Image bossImg005 = new ImageIcon("imgs\\boss005.png").getImage();
-    //Boss006图片
+    //Boss005图片
     public static Image bossImg006 = new ImageIcon("imgs\\boss006.png").getImage();
     //爆炸图片GIF
     public static Image epImg = new ImageIcon("imgs\\explode.gif").getImage();
@@ -40,6 +40,12 @@ public class GameUtils {
     public static Image enBullet02Img = new ImageIcon("imgs\\enBullet02.png").getImage();
     //敌方子弹图片
     public static Image enBullet03Img = new ImageIcon("imgs\\enBullet03.png").getImage();
+    //敌方子弹图片
+    public static Image enBullet04Img = new ImageIcon("imgs\\enBullet04.png").getImage();
+    //敌方子弹图片
+    public static Image enBullet05Img = new ImageIcon("imgs\\enBullet05.png").getImage();
+    //敌方子弹图片
+    public static Image enBullet06Img = new ImageIcon("imgs\\enBullet06.png").getImage();
     //敌机图片
     public static Image enemyImg = new ImageIcon("imgs\\enemy.png").getImage();
     //敌机子弹图片
@@ -60,13 +66,17 @@ public class GameUtils {
     public static List<Bullet02Obj> enBullet0201ObjList = new ArrayList<>();
     public static List<Bullet02Obj> enBullet0202ObjList = new ArrayList<>();
     //Boss03子弹集合
-    public static List<Bullet03Obj> enBullet03ObjList = new ArrayList<>();
+    public static List<Bullet03Obj> enBullet0301ObjList = new ArrayList<>();
+    public static List<Bullet03Obj> enBullet0302ObjList = new ArrayList<>();
     //Boss04子弹集合
-    public static List<Bullet03Obj> enBullet04ObjList = new ArrayList<>();
+    public static List<Bullet04Obj> enBullet0401ObjList = new ArrayList<>();
+    public static List<Bullet04Obj> enBullet0402ObjList = new ArrayList<>();
     //Boss05子弹集合
-    public static List<Bullet03Obj> enBullet05ObjList = new ArrayList<>();
+    public static List<Bullet05Obj> enBullet0501ObjList = new ArrayList<>();
+    public static List<Bullet05Obj> enBullet0502ObjList = new ArrayList<>();
     //Boss06子弹集合
-    public static List<Bullet03Obj> enBullet06ObjList = new ArrayList<>();
+    public static List<Bullet06Obj> enBullet0601ObjList = new ArrayList<>();
+    public static List<Bullet06Obj> enBullet0602ObjList = new ArrayList<>();
 
     //敌方子弹集合
     public static List<EnShellObj> enShellObjList = new ArrayList<>();

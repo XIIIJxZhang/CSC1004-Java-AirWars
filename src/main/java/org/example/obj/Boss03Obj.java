@@ -6,7 +6,7 @@ import  java.awt.*;
 import static org.example.AirWars.*;
 
 public class Boss03Obj extends GameObj{
-    public static int healthPoint03 = 100;
+    public static int healthPoint03 = 5;
     public Boss03Obj(Image img, int x, int y, int width, int height, double speed, AirWars frame) {
         super(img, x, y, width, height, speed, frame);
     }
@@ -36,6 +36,8 @@ public class Boss03Obj extends GameObj{
                 AirWars.score = AirWars.score + 50;
                 PlaneObj.urHP = 18;
                 state = 3;
+                Vur = 8;
+                Ven02 = 35;
             }
         }
         //血条白色背景
